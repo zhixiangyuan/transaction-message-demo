@@ -43,7 +43,7 @@ public class TransactionProducer  implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        producer.setNamesrvAddr("111.231.110.149:9876");
+        producer.setNamesrvAddr("127.0.0.1:9876");
 
         ExecutorService executorService = new ThreadPoolExecutor(2, 5, 100, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(2000), new ThreadFactory() {
             @Override
